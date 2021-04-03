@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
+  
     <meta charset="utf-8" />
     <title>Covid-19Info</title>
     <meta name="author" content="Cynthia Iradukunda">
     <meta name="description" content=" The Covid19Info is a website to help people interested to travel in Uk, Rwanda, and Mauritius get information on the current situation of Covid19.">
-    <link rel="stylesheet"   href="../Css/home.css"/>
+    <link rel="stylesheet"   href="css.php"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -14,44 +14,16 @@
 </head>
 
 <body>
-
-   <style>
-   .error{
-          color: red;
-   }
-
-   .input{
-          display: grid;
-          grid-template-row: auto auto;
-          grid-row-gap: 10px;
-
-
-   }
-
-   .feedback{
-     color: rgba(203,62,60,255);
-     font-family: 'Della Respira', serif;
-     font-weight: bold;
-     text-align: center;
-   }
-
-   .form-inputs{
-          align-items: baseline;
-   }
-   </style>
-
+    
     <?php
-
-
-    $css = file_get_contents('../Css/home.css');
- 
+  
 
    // setting variables 
     $name = $email = $comment = "";
     $nameErr = $emailErr = $commentErr = "";
     $submitMessage ="";
-    $countErrors = 0;
-
+    $count = 0;
+  
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if(empty($_POST["name"])){
@@ -86,6 +58,8 @@
     }
 
     
+    if($count ==0){
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -104,6 +78,9 @@
     }
 
     }
+    
+
+    }
 
     function test_input($data){
     $data = trim($data);
@@ -119,7 +96,7 @@
     <nav class="background-contactUs">
         <div class="overlay ">
 
-            <div class="AboutUsInfo">
+            <div class="ContactUsInfo">
 
                 <h1>Get in touch</h1>
 
@@ -155,15 +132,15 @@
                 <div class="dropdown">
                     <p class="dropbtn">Country<i class="fa fa-sort-down"></i></p>
                     <div class="dropdown-content">
-                        <a href="#">Rwanda</a>
-                        <a href="#">UK</a>
-                        <a href="#">Mauritius</a>
+                        <a href="../Html/Rwanda.html">Rwanda</a>
+                        <a href="../Html/UnitedKingdom.html">UK</a>
+                        <a href="../Html/Mauritius.html">Mauritius</a>
                     </div>
 
                 </div>
-                <a>News</a>
-                <a class="active" href="../Html/AboutUs.html">About Us</a>
-                <a>Contact Us</a>
+            
+                <a href="../Html/AboutUs.html">About Us</a>
+                <a href="#">Contact Us</a>
 
             </div>
         </div>
@@ -229,9 +206,7 @@
             </div>
 
             <span class="error"><?php echo $commentErr;?></span>
-            <textarea name="comment" placeholder="Enter your message">
-           <?php echo (empty($commentErr) && !empty($count))? $comment : '' ?>
-            </textarea>
+            <textarea class="textArea" placeholder="Enter your message" name="comment"><?php echo (empty($commentErr) && !empty($count))? $comment :'';?></textarea>
             
             <button type="submit"> Send</button>
 
@@ -245,7 +220,7 @@
 
         <div class="info">
 
-            <h1>Covid19-Info</h1>
+            <h2>Covid19-Info</h2>
             <p>Lorem ispum  Lorem ispum Lorem ispum Lorem ispum  </p>
 
             <div class="links">
@@ -262,12 +237,12 @@
 
         <div class="countries">
 
-            <h1>Country</h1>
+            <h2>Country</h2>
 
             <div class="links">
-                <a>Rwanda</a>
-                <a>UK</a>
-                <a>Mauritius</a>
+                <a href="../Html/Rwanda.html">Rwanda</a>
+                <a href="../Html/UnitedKingdom.html">UK</a>
+                <a href="../Html/Mauritius.html" >Mauritius</a>
             </div>
 
 
@@ -276,12 +251,11 @@
 
         <div class="usefulLinks">
 
-            <h1>Useful Links</h1>
+            <h2>Useful Links</h2>
 
             <div class="links">
-                <a>About Us</a>
-                <a>News</a>
-                <a>Contact us</a>
+                <a href="../Html/AboutUs.html">About Us</a>
+                <a href="#">Contact us</a>
             </div>
 
 

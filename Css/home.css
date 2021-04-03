@@ -1,9 +1,11 @@
- 
+
 
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
     font-family: 'Della Respira', serif;
+    overflow-x: hidden
 }
 
 * {
@@ -19,19 +21,18 @@ html, body {
     position: relative;
     width: 100%;
     height: 100vh;
-  
 }
 
-.nav-slideshow video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .nav-slideshow video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-.video-div{
+.video-div {
     display: none;
 }
 
@@ -46,14 +47,14 @@ html, body {
     grid-row-gap: 60px;
 }
 
+
 .icons {
     color: white;
     font-size: 50px;
     cursor: pointer;
-    
 }
 
- .icons .prev-icon {
+    .icons .prev-icon {
         padding: 10px;
     }
 
@@ -61,7 +62,6 @@ html, body {
     color: white;
     font-size: 55px;
     font-weight: bold;
- 
 }
 
 
@@ -74,50 +74,39 @@ html, body {
     cursor: pointer;
     border: 5px solid white;
     padding: 10px;
-    transition: font-size 2s ;
+    transition: font-size 2s;
 }
 
-.video-text h2 a:hover{
-    
-    font-size: 35px;
-    
-
-}
+    .video-text h2 a:hover {
+        font-size: 35px;
+    }
 
 .logo {
     position: absolute;
     top: 20px;
     left: 30px;
     color: white;
-   
 }
 
-.nav-links{
-
-   display: flex;
-   flex-direction: row;
-   position: absolute;
-   align-items: baseline;
-   top:20px;
-   right: 30px;
-   color: white;
- 
-   
- 
-   
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: baseline;
+    top: 20px;
+    right: 30px;
+    color: white;
 }
 
-.nav-links .active{
-    font-weight: bolder;
-
-}
+    .nav-links .active {
+        font-weight: bolder;
+    }
 
     .nav-links a {
         padding: 20px;
         text-decoration: none;
         cursor: pointer;
         color: white;
-         
     }
 
 .hamburg {
@@ -132,46 +121,42 @@ html, body {
     cursor: pointer;
 }
 
-.hamburg .line{
+    .hamburg .line {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin-top: 2px;
+    }
 
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin-top: 2px;
-
-}
-
-.hamburg .line1 {
+    .hamburg .line1 {
         width: 25px;
         height: 4px;
         background-color: white;
         margin-top: 2px;
- 
- }
+    }
 
-.hamburg .line2 {
+    .hamburg .line2 {
         width: 20px;
         height: 4px;
         background-color: white;
         margin-top: 2px;
-}
+    }
 
-.hamburg .line3 {
+    .hamburg .line3 {
         width: 15px;
         height: 4px;
         background-color: white;
         margin-top: 2px;
-}
+    }
 
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-.dropbtn{
+.dropbtn {
     color: white;
     padding: 2px;
-  
 }
 
 .dropdown-content {
@@ -180,21 +165,19 @@ html, body {
     background-color: rgba(203,62,60,255);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    
 }
 
-.dropdown-content a {
+    .dropdown-content a {
         color: white;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-}
+    }
 
-.dropdown-content a:hover {
-        background-color: #f1f1f1;
-        color: black;
-       
- }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: black;
+        }
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -257,9 +240,9 @@ html, body {
         }
 
 
-   .nav-open .sidebar .nav-links .dropbtn {
+            .nav-open .sidebar .nav-links .dropbtn {
                 color: white;
-    }
+            }
 
     .nav-open .dropbtn {
         color: black;
@@ -274,16 +257,14 @@ html, body {
         }
 }
 
-    /***
+/***
           Mission section style
     */
 
- .mission-section{
-
-     width: 1000px;
-     margin: 0 auto;
-      
- }
+.mission-section {
+    width: 1000px;
+    margin: 0 auto;
+}
 
     .mission-section h1 {
         color: rgba(203,62,60,255);
@@ -296,18 +277,17 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-   
-.mission-description .img{
+
+    .mission-description .img {
         width: 100%;
         height: auto;
- }
+    }
 
- 
 
-  .mission-description button {
+
+    .mission-description button {
         background-color: rgba(203,62,60,255);
         border: none;
         color: white;
@@ -320,47 +300,46 @@ html, body {
         margin: 12px 74px;
     }
 
+.mission-description-text a {
+    background-color: rgba(203,62,60,255);
+    height: 50px;
+    width: 300px;
+    padding: 15px;
+    text-align:center;
+    text-decoration: none;
+    color: white;
+}
+
 
 @media screen and (max-width: 800px) {
-
-    .mission-section{
-       width: 100%;
-       margin: 0; 
-       text-align:center;
-        
+    .mission-section {
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
- 
 
-    .mission-description{
-         display: block;
+
+    .mission-description {
+        display: block;
     }
 
     .mission-description-text {
-
-          display: grid;
-          grid-auto-rows: auto auto;
-          grid-row-gap: 20px;
-         
-          justify-items: center;
-          
-       
+        display: grid;
+        grid-auto-rows: auto auto;
+        grid-row-gap: 20px;
+        justify-items: center;
     }
 
-        .mission-description-text p{
-           
+        .mission-description-text p {
         }
 
-        .mission-description img {
-            display: none;
-        }
+    .mission-description img {
+        display: none;
+    }
 
     .mission-description-text button {
-      
         margin: 0;
     }
-
- 
-
 }
 
 /**
@@ -397,87 +376,88 @@ html, body {
     */
 
 .cases {
+    padding-bottom: 30px;
+}
+
+.cases-numbers {
+    display: grid;
+    color: white;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center; 
+    grid-column-gap: 100px;
+
+}
+
+.cases-numbers .item h1 {
+        color: rgba(203,62,60,255);
+        font-weight: bolder;
+        color: white;
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     background-color: rgba(203,62,60,255);
+    grid-row-gap: 10px;
+    justify-content: center; 
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
 }
 
+    .item h2 {
+        text-align: center;
+    }
 
-.cases-numbers{
-display:flex;
-color: white;
-justify-content: space-around;
- 
-
-}
- 
- .cases-numbers .item h1 {
-      color: rgba(203,62,60,255);
-      font-weight: bolder;
-      color: white;
- }
-
-
- .item{
-
-     display: grid;
-     grid-template-rows: auto auto auto;
-     grid-row-gap: 10px;
-      
- }
-
- .item h2{
-
-     text-align: center;
- }
-
- /**Animate numbers*/
+/**Animate numbers*/
 
 
 
 @media screen and (max-width: 800px) {
 
-    .cases-numbers{
+    .cases-numbers {
         display: block;
         text-align: center;
     }
-
 }
 
 
 
 /**Styling the news section*/
 
-.news{
+.news {
     width: 900px;
     margin: 0 auto;
 }
 
-.news h1 {
-    color: rgba(203,62,60,255);
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
+    .news h1 {
+        color: rgba(203,62,60,255);
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+.news-item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
 }
 
-.news-item{
-  width: 100%;
-  display: grid; 
-  grid-template-columns: auto auto; 
-  grid-template-rows: auto auto auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  justify-content: center;
-    
-}
 
- 
 
-.details .header{
-display: grid;
-grid-template-columns: auto auto;
-grid-template-rows: auto;
-align-items: baseline;
-justify-content: space-between;
-
+.details .header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .details button {
@@ -492,13 +472,12 @@ justify-content: space-between;
     cursor: pointer;
 }
 
-.news-item img{
+.news-item img {
     width: 100%;
     height: auto;
-  
 }
 
- 
+
 
 
 
@@ -506,23 +485,17 @@ justify-content: space-between;
 
     .news {
         width: 400px;
-        margin:0 auto;
-        
+        margin: 0 auto;
     }
 
-    .news-item{
+    .news-item {
         display: block;
     }
 
-    .news-item img{
-        display: none;
-    }
-
-   
-
-    
-     
-  }
+        .news-item img {
+            display: none;
+        }
+}
 
 @media screen and (max-width: 450px) {
     .news {
@@ -531,89 +504,94 @@ justify-content: space-between;
         padding: 10px;
     }
 
-    .details .button{
+    .details .button {
         display: flex;
         justify-content: center;
     }
-
-
-
-
 }
 
-    /**footer links */
+/**footer styling */
 
-    .footer {
-        background-color: rgba(203,62,60,255);
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto;
-        justify-content: space-around;
-        color: white;
-        padding: 10px;
-    }
+.footer {
+    background-color: rgba(203,62,60,255);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-around;
+    color: white;
+    padding: 10px;
+}
 
-        .footer .countries .links {
-            display: flex;
-            flex-direction: column;
-        }
-
-    footer .usefulLinks .links {
+    .footer .countries .links {
         display: flex;
         flex-direction: column;
     }
 
-    footer .info .links a {
-        padding: 20px;
-        font-size: 20px;
+footer .usefulLinks .links {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .info .links a {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer .countries .links a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+footer .usefulLinks .links a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .footer {
+        margin-top: 20px;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
     }
 
-    footer .countries .links a {
-        padding: 5px;
-    }
-
-    footer .usefulLinks .links a {
-        padding: 5px;
-    }
-
-
-
-    @media screen and (max-width: 800px) {
-
-        .footer {
-            margin-top: 20px;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
+        .footer .info {
+            grid-column-start: 1;
+            grid-column-end: 3;
         }
 
-            .footer .info {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-
-            .footer .countries {
-                grid-column-start: 1;
-                grid-column-end: 2;
-            }
-
-            .footer .usefulLinks {
-                grid-column-start: 2;
-                grid-column-end: 3;
-            }
-
-
-        .footer-section {
-            display: flex;
-            justify-content: space-between;
+        .footer .countries {
+            grid-column-start: 1;
+            grid-column-end: 2;
         }
+
+        .footer .usefulLinks {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
     }
+}
 
 
-    /**********************************************************************************About us page styling*******************************/
+/**********************************************************************************About us page styling*******************************/
 
-    /**Nav bar*/
+/**Nav bar*/
 
 .background-aboutUs {
+    position: relative;
     background-image: url(../Image/covid-19.jpeg);
     background-repeat: no-repeat;
     height: 500px;
@@ -624,15 +602,14 @@ justify-content: space-between;
 
 
 .overlay {
-    position: relative;
+    position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .AboutUsInfo {
@@ -643,12 +620,11 @@ justify-content: space-between;
     justify-content: center;
     align-items: center;
     height: 100%;
-
 }
 
-.AboutUsInfo p{
-    width:  50%;
-}
+    .AboutUsInfo p {
+        width: 50%;
+    }
 
 
 @media screen and (max-width: 800px) {
@@ -661,23 +637,21 @@ justify-content: space-between;
 
 /**FAQ section*/
 
-.FAQ{
-
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.FAQ .question-answer{
+    .FAQ .question-answer {
+        width: 50%;
+    }
 
-    width: 50%;
-}
-
-.FAQ h1, .FAQ h2 {
+    .FAQ h1, .FAQ h2 {
         color: rgba(203,62,60,255);
- }
+    }
 
 @media screen and (max-width: 800px) {
 
@@ -689,22 +663,20 @@ justify-content: space-between;
 
 /** Team section styling*/
 
-.team{
-
+.team {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
- 
-.teamDetails{
+
+.teamDetails {
     width: 50%;
     text-align: center;
 }
 
-.team img{
+.team img {
     width: 50%;
     height: auto;
     border-radius: 50%;
@@ -723,19 +695,13 @@ justify-content: space-between;
 
     .team img {
         width: 80%;
-   
     }
-
-
 }
-      
- /**************************************************************************Contact Us Page style**********************************/
 
- /**Nav bar*/
+/*********************Country - Rwanda Info **********************************/
 
-
-.background-contactUs {
-    background-image: url(../Image/contact.jpg);
+.background-CountryInfo {
+    background-image: url(../Image/Rwanda.jpg);
     background-repeat: no-repeat;
     height: 500px;
     width: 100%;
@@ -743,131 +709,322 @@ justify-content: space-between;
     opacity: 0.8;
 }
 
-/**Contact us section*/
-
-.contactUs{
-
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto; 
-    justify-content: center;
-    column-gap: 60px;
-    padding: 80px 0;
+.background-UKsInfo {
+    background-image: url(../Image/uk.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
     width: 100%;
+    position: relative;
+    opacity: 0.8;
+}
+
+.background-MauritiusInfo {
+    background-image: url(../Image/Mauritius.jpeg);
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    opacity: 0.8;
 }
 
 
 
-.contactInfo .contact-item {
-    flex-direction: row;
-    align-items: baseline;
+.CountryInfo, .MauritiusInfo, .UKInfo {
+    width: 100%;
+    color: white;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-.contact-item h2{
-    padding-left: 20px;
+ .CountryInfo h1, .MauritiusInfo h1, .UKInfo h1 {
+        padding-top: 30px;
+        color: white;
+ }
+
+    .CountryInfo P, .MauritiusInfo p, .UKInfo p {
+        width: 80%;
+    }
+
+@media screen and (max-width: 800px) {
+
+    .CountryInfo p {
+        width: 96%;
+    }
 }
 
-.contact-item i {
-    font-size: 25px;
-  color: rgba(203,62,60,255);
+
+@media screen and (max-width: 400px) {
+
+    .CountryInfo p {
+        width: 90%;
+    }
+}
+/************Map css*/
+
+.toggleSwitch a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    float: left;
 }
 
-form{
-    display:grid;
-    grid-template-columns: auto; 
-    grid-gap: 20px;
-    width: 500px;
-  
+    .toggleSwitch a:focus {
+        background-color: rgba(203,62,60,255);
+        color: white;
+        outline: none;
+    }
+
+.toggleSwith a:hover {
+    color: black;
 }
 
-.form-inputs {
+
+
+.country-buttons {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+    align-items: start;
+}
+
+
+
+/********* Map section csss ****/
+
+.map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.mapDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}
+
+.map-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+  .map-item #caseTitle, .map-item DeathTitle {
+        cursor: pointer;
+    }
+
+    .map-item a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 203px;
+        padding: 10px;
+        text-align: center;
+        background-color: rgba(203,62,60,255);
+    }
+
+
+
+    .map-item p {
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+@media screen and (max-width: 800px) {
+
+    .map {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .toggleSwitch a {
+        flex-direction: column;
+        width: 69px;
+    }
+}
+
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 600px;
+    width: 600px;
+}
+
+#gmap_canvas, .mapDetails {
+    padding: 20px;
+}
+
+/** Graphs styling*/
+
+.chartData {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-column-gap: 30px;
+    justify-content: space-around;
 }
 
-form input{
- border-radius: 5px;
- width: 100%;
- height: 40px;
- resize: vertical;
-  
+.chart-title p {
+    padding-bottom: 15px;
 }
 
-form h1{
+iframe {
+    width: 1070px;
+    height: 400px;
+    border: 0 ;
+}
+
+#myselect {
+    width: 200px;
+}
+
+
+
+.chart-container {
+    position: relative;
+}
+
+.chart-title {
     text-align: center;
-}
-form textarea {
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    resize: vertical;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+    .chart-title h2 {
+        color: rgba(203,62,60,255);
+    }
 
-
-form button {
-    background-color: rgba(203,62,60,255);
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-
+@media screen and (min-width: 800px) {
+    .chart-container {
+        width: 50vw;
+    }
 }
 
 @media screen and (max-width: 800px) {
- 
-    .contactUs{
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-       
-         
-        
-    }
-
-    .contactInfo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    .form-inputs{
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 20px;
-    }
-
-    form{
+    iframe {
         width: 100%;
+        height: 100%;
     }
 
-   form textarea {
-     height: 200px;
-    
-          
-   }
-  
-
+    .chart-title p {
+        width: 400px;
+    }
 }
 
 
- 
 
+@media screen and (max-width: 800px) {
+    .chartData {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        grid-row-gap: 30px;
+    }
 
+    .country-buttons {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        grid-column-gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/** Travel Restrictions*/
+
+.restrictions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restriction-item {
+    width: 80rem;
    
-    
+ 
+}
+
+    .restriction-item h2 {
+        background-color: rgba(203,62,60,255);
+        Color: white;
+        font-size: 20px;
+        height: 50px;
+        padding-left: 10px;
+        border-radius: 5px;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 210px 210px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .restriction-item h2:hover{
+        
+    }
+
+        .restriction-item #travel-one, #travel-two, .restriction-item #airline-one, #airline-two {
+            grid-template-columns: 170px 170px;
+        }
+
+    .restriction-item strong {
+        color: rgba(203,62,60,255);
+    }
 
 
+.restrictions #travel-data, #airline-data, #quarantine-data, #certificate-data {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+
+    .restriction-item {
+        width: 900px;
+    }
+}
 
 
+    @media screen and (max-width: 800px) {
 
+        .restrictions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .restriction-item {
+            width: 450px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+
+        .restriction-item {
+            width: 312px;
+        }
+    }
 

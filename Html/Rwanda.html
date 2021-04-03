@@ -1,0 +1,234 @@
+﻿<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <title>Covid-19Info</title>
+    <meta name="author" content="Cynthia Iradukunda">
+    <meta name="description" content=" The Covid19Info is a website to help people interested to travel in Uk, Rwanda, and Mauritius get information on the current situation of Covid19.">
+    <link rel="stylesheet" href="../Css/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Della+Respira&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <nav class="background-CountryInfo">
+        <div class="overlay ">
+
+            <div class="CountryInfo">
+
+                <h1>About Rwanda</h1>
+
+                <p>
+                    Rwanda, warmly known as "the land of a thousand hills" is situated in East central Africa. It lies 121 Km South (75 miles) of the equator in the Tropic of Capricorn, 1416 kilometers (880Miles) west of the Indian Ocean and 1250Km (777Miles) east of the Atlantic Ocean literally the heart of Africa.
+
+                    Rwanda is bordered by Uganda to the north, Tanzania to the east, Burundi to the south and the Democratic Republic of Congo to the west. The country has a temperate climate, with two rainy seasons (February to April, November to January).
+
+                    Average temperatures range from 16-22 degree Celsius.
+                </p>
+
+
+
+            </div>
+        </div>
+
+        <div class="logo">
+            <h1>Covid-19Info</h1>
+        </div>
+
+
+        <div class="hamburg">
+
+            <div class="line"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+
+
+        <div class="sidebar">
+            <div class="nav-links">
+
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                    <p class="dropbtn">Country<i class="fa fa-sort-down"></i></p>
+                    <div class="dropdown-content">
+                        <a href="Rwanda.html">Rwanda</a>
+                        <a href="UnitedKingdom.html">UK</a>
+                        <a href="Mauritius.html">Mauritius</a>
+                    </div>
+
+                </div>
+                <a href="AboutUs.html">About Us</a>
+                <a href="../PHP/ContactUS.php">Contact Us</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="chart-title">
+            <h2>Map</h2>
+            <p>Learn about Rwanda location and the total confirmed cases, deaths, and number of vacinnated people by clicking on each button</p>
+        </div>
+        <div class="map">
+            <div class="mapDetails">
+                <div class="map-item">
+                    <a id="caseTitle" href="#">Confirmed Cases</a>
+                    <p id="Cases"></p>
+
+                </div>
+
+                <div class="map-item">
+                    <a id="DeathTitle">Confirmed Deaths</a>
+                    <p id="Deaths"></p>
+                </div>
+
+                <div class="map-item">
+
+                    <a id="vacinTitle">Vacinated People</a>
+                    <p id="Vaccine"></p>
+                </div>
+            </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1020806.7306002068!2d29.31994574717674!3d-1.9421908831241503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29654e73840e3%3A0x7490b026cbcca103!2sRwanda!5e0!3m2!1sen!2srw!4v1617279132998!5m2!1sen!2srw" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+    </section>
+
+    <section >
+        <div class="chart-title">
+            <h2>Charts </h2>
+            <p>Choose the type of the chart you want from the dropdown and see how the cases, deaths, and vaccines  increased daily or weekly</p>
+        </div>
+  
+        <div class="chartData">
+            <div class="country-buttons">
+
+                <select name="graphsType" id="myselect" onclick="displayData()">
+                    <option value="Confirmed Deaths">Confirmed Death</option>
+                    <option value="Confirmed Cases">Confirmed Cases</option>
+                    <option value="Vacinated People">Vaccinated People</option>
+                </select>
+
+
+                <div class="toggleSwitch">
+                    <a class="Daily" tabindex="1" onclick="displayData()" autofocus>Daily</a><a tabindex="1" class="Weekly" onclick="displayData()">Weekly</a>
+
+                </div>
+
+            </div>
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section class="restrictions">
+
+        <div class="restriction-item">
+
+            <h2 id="travel-one" onclick="displayTravelRestritions()">Travel Restrictions <i class="fa fa-chevron-right"></i> </h2>
+            <div id="travel-data">
+
+                <h2 id="travel-two" onclick="closeDataTravelRestritions()">Travel Restrictions <i class="fa fa-chevron-down"></i></h2>
+                <p id="travel"></p>
+            </div>
+
+        </div>
+
+        <div class="restriction-item">
+            <h2 id="airline-one" onclick="displayAirlineRestrictions()">Airline Restrictions  <i class="fa fa-chevron-right"></i></h2>
+            <div id="airline-data">
+
+                <h2 id="airline-two" onclick="closeAirlineRestrictions()">Airline Restrictions <i class="fa fa-chevron-down"></i></h2>
+                <p id="Airline"></p>
+            </div>
+
+        </div>
+
+        <div class="restriction-item">
+
+            <h2 id="quarantine-one" onclick="displayQuarantineRestrictions()">Quarantine Restrictions<i class="fa fa-chevron-right"></i> </h2>
+            <div id="quarantine-data">
+
+                <h2 id="quarantine-two" onclick="closeQuarantineRestrictions()">Quarantine Restrictions<i class="fa fa-chevron-down"></i></h2>
+                <p id="quarantine"></p>
+            </div>
+
+        </div>
+
+        <div class="restriction-item">
+
+            <h2 id="certificate-one" onclick="displayCertificateRestrictions()">Certificate Restrictions<i class="fa fa-chevron-right"></i> </h2>
+            <div id="certificate-data">
+
+                <h2 id="certificate-two" onclick="closeCertificateRestrictions()">Certificate Restrictions<i class="fa fa-chevron-down"></i></h2>
+                <p id="certificate"></p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="info">
+
+            <h2>Covid19-Info</h2>
+            <p>Lorem ispum  Lorem ispum Lorem ispum Lorem ispum  </p>
+
+            <div class="links">
+
+                <a><i class="fa fa-facebook-f"></i></a>
+                <a><i class="fa fa-twitter"></i></a>
+                <a><i class="fa fa-instagram"></i></a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="countries">
+
+            <h2>Country</h2>
+
+            <div class="links">
+                <a>Rwanda</a>
+                <a href="UnitedKingdom.html">UK</a>
+                <a href="Mauritius.html">Mauritius</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="usefulLinks">
+
+            <h2>Useful Links</h2>
+
+            <div class="links">
+                <a class="AboutUs.html">About Us</a>
+                <a class="ContactUs.html">Contact us</a>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.bundle.js"></script>
+    <script src="../javaScript/Rwanda.js"></script>
+
+</body>
+</html>
