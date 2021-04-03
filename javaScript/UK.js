@@ -442,7 +442,7 @@ $('#caseTitle').click(function () {
 
 $('#DeathTitle').click(function () {
 
-    document.getElementById('Deaths').innerHTML = commaSeparateNumber(yDailyConfirmedDeathsData[yDailyConfirmedDeathsData.length - 1]);
+    document.getElementById('Deaths').innerHTML = commaSeparateNumber(Math.round(yDailyConfirmedDeathsData[yDailyConfirmedDeathsData.length - 1]));
 
 
 })
