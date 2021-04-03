@@ -449,9 +449,8 @@ $('#DeathTitle').click(function () {
 
 
 $('#vacinTitle').click(function () {
-    let result = yVaccinatedPeopleDailyData.map(i => Number(i));
-      result.sort(function (a, b) { return parseFloat(a) - parseFloat(b) });
-      console.log(result);
+      let result = yVaccinatedPeopleDailyData.map(i => Number(i));
+     result.sort(function (a, b) { return parseFloat(a) - parseFloat(b) });
 
     document.getElementById('Vaccine').innerHTML = result[result.length - 1] + "%";
 
