@@ -419,8 +419,19 @@ html, body {
 @media screen and (max-width: 800px) {
 
     .cases-numbers {
-        display: block;
         text-align: center;
+        display: grid;
+        color: white;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        grid-row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cases-numbers {
+        grid-column-gap: 20px;
     }
 }
 
