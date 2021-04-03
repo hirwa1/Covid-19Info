@@ -439,9 +439,10 @@ $('#DeathTitle').click(function () {
 
 
 $('#vacinTitle').click(function () {
-    let yVaccinatedPeopleDailyData = yVaccinatedPeopleDailyData.map(i => Number(i));
-    yVaccinatedPeopleDailyData.sort(function (a, b) { return parseFloat(a) - parseFloat(b) });
-    document.getElementById('Vaccine').innerHTML = commaSeparateNumber(yVaccinatedPeopleDailyData[yVaccinatedPeopleDailyData.length - 1]) + "%";
+      let result = yVaccinatedPeopleDailyData.map(i => Number(i));
+     result.sort(function (a, b) { return parseFloat(a) - parseFloat(b) });
+
+    document.getElementById('Vaccine').innerHTML = result[result.length - 1] + "%";
    
 
 })
